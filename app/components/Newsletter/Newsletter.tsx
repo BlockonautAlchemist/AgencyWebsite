@@ -9,7 +9,7 @@ const Newsletter = () => {
                     {/* COLUMN-1 */}
                     <div className='hidden lg:block'>
                         <div className='float-right pt-20 relative'>
-                            <Image src={'/assets/newsletter/bgImage.png'} alt="bgimg" width={588} height={334} />
+                            <Image src={'/assets/newsletter/email-marketing.webp'} alt="email marketing" width={588} height={334} />
                             <div className="absolute top-10 right-0">
                                 <Image src={'/assets/newsletter/leaf.svg'} alt="leafimg" width={81} height={81}/>
                             </div>

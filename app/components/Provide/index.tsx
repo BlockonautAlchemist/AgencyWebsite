@@ -26,7 +26,7 @@ const Aboutdata: datatype[] = [
 
     },
     {
-        imgSrc: "/assets/provide/uidesign.svg",
+        imgSrc: "/assets/provide/heaking.svg",
         country: "Smart Tools & Custom Ideas",
         paragraph: 'Simple tools and AI-powered ideas that save time and improve results.',
     },
