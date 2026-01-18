@@ -9,20 +9,20 @@ const Banner = () => {
                 <div className="mx-auto max-w-7xl pt-16 sm:pt-20 pb-20 banner-image">
                     <div className="text-center">
                         <h1 className="text-4xl font-semibold text-navyblue sm:text-5xl  lg:text-7xl md:4px lh-96">
-                            Solve problem with an <br /> integrated agency.
+                            We help businesses get noticed, get chosen, and get paid.
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-700">
-                            Ehya is the Instagram analytics platform teams use to stay focused on the goals, track <br /> engagement for report your business .
+                            Creative design and smart ideas that help your business run better and sell more.
                         </p>
                     </div>
 
 
                     <div className="text-center mt-5">
                         <button type="button" className='text-15px text-white font-medium bg-blue py-5 px-9 mt-2 leafbutton'>
-                            See our portfolio
+                            Get a Free Improvement Check
                         </button>
                         <button type="button" className='text-15px ml-4 mt-2 text-blue transition duration-150 ease-in-out hover:text-white hover:bg-blue font-medium py-5 px-16 border border-lightgrey leafbutton'>
-                            More info
+                            See Examples
                         </button>
                         
                     </div>

@@ -1,37 +1,43 @@
 "use client"
-import Image from "next/image";
 import React, { Component } from "react";
+import Image from "next/image";
 import Slider from "react-slick";
 
-// IMAGES DATA FOR CAROUSEL
+// TEXT PHRASES DATA FOR CAROUSEL
 interface Data {
-    imgSrc: string;
+    text: string;
 }
 
 const data: Data[] = [
     {
-        imgSrc: "/assets/carousel/google.svg"
+        text: "More leads"
     },
     {
-        imgSrc: "/assets/carousel/garnier.png"
+        text: "Clearer messaging"
     },
     {
-        imgSrc: "/assets/carousel/slack.png"
+        text: "Faster follow-ups"
     },
     {
-        imgSrc: "/assets/carousel/udemy.png"
+        text: "Less manual work"
     },
     {
-        imgSrc: "/assets/carousel/google.svg"
+        text: "Better results"
     },
     {
-        imgSrc: "/assets/carousel/garnier.png"
+        text: "More leads"
     },
     {
-        imgSrc: "/assets/carousel/slack.png"
+        text: "Clearer messaging"
     },
     {
-        imgSrc: "/assets/carousel/udemy.png"
+        text: "Faster follow-ups"
+    },
+    {
+        text: "Less manual work"
+    },
+    {
+        text: "Better results"
     }
 ]
 
@@ -47,8 +53,12 @@ export default class MultipleItems extends Component {
             arrows: false,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 1,
             cssEase: "linear",
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            swipe: false,
+            touchMove: false,
             responsive: [
                 {
                     breakpoint: 1024,
@@ -87,8 +97,13 @@ export default class MultipleItems extends Component {
                     <div className="py-14">
                         <Slider {...settings}>
                             {data.map((item, i) =>
-                                <div key={i}>
-                                    <Image src={item.imgSrc} alt={item.imgSrc} width={150} height={150} />
+                                <div key={i} className="flex items-center justify-center px-4">
+                                    <div className="flex items-center gap-3">
+                                        <div className="rounded-full h-8 w-8 flex items-center justify-center bg-circlebg flex-shrink-0">
+                                            <Image src="/assets/why/check.svg" alt="check-icon" width={20} height={20} />
+                                        </div>
+                                        <span className="text-xl font-medium text-gray-700 whitespace-nowrap">{item.text}</span>
+                                    </div>
                                 </div>
                             )}
                         </Slider>
