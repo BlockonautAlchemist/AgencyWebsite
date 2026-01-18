@@ -7,16 +7,16 @@ interface whydata {
 
 const whydata: whydata[] = [
     {
-        heading: "Quality",
-        subheading: "Follow a hashtag growth total posts, videos and images.more revitions",
+        heading: "Clear, Practical Improvements",
+        subheading: "We focus on changes that actually make a difference, not unnecessary extras.",
     },
     {
-        heading: "Communication",
-        subheading: "Follow a hashtag growth total posts, videos and images.more revitions",
+        heading: "Straightforward Communication",
+        subheading: "You'll always know what we're working on and why it matters.",
     },
     {
-        heading: "Reliability",
-        subheading: "Follow a hashtag growth total posts, videos and images.more revitions",
+        heading: "Reliable Follow-Through",
+        subheading: "What we agree on gets done on time and with attention to detail.",
     }
 ]
 
@@ -35,8 +35,8 @@ const Why = () => {
 
                     {/* COLUMN-2 */}
                     <div>
-                        <h3 className="text-4xl lg:text-5xl pt-4 font-semibold sm:leading-tight mt-5 text-center lg:text-start text-navyblue">Why we best?</h3>
-                        <h4 className="text-lg pt-4 font-normal sm:leading-tight text-center text-gray-600 lg:text-start">Dont waste time on search manual tasks. Let Automation do it for you. Simplify workflows, reduce errors, and save time.</h4>
+                        <h3 className="text-4xl lg:text-5xl pt-4 font-semibold sm:leading-tight mt-5 text-center lg:text-start text-navyblue">Why Businesses Choose Us</h3>
+                        <h4 className="text-lg pt-4 font-normal sm:leading-tight text-center text-gray-600 lg:text-start">We focus on clear communication and practical improvements you can rely on.</h4>
 
                         <div className="mt-10">
                             {whydata.map((items, i) => (

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Newsletter = () => {
     return (
-        <div className='-mt-32 relative z-3'>
-            <div className="mx-auto max-w-2xl lg:max-w-7xl bg-blue-500 rounded-3xl">
+        <div className='relative z-3 -mt-20 mb-20'>
+            <div className="mx-auto max-w-2xl lg:max-w-7xl bg-blue-500 rounded-3xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-y-10 gap-x-6 lg:grid-cols-2 xl:gap-x-8">
 
                     {/* COLUMN-1 */}
