@@ -4,6 +4,7 @@ import Buyers from './components/Buyers/index';
 import Provide from './components/Provide/index';
 import Why from './components/Why/index';
 import Network from './components/Network/index';
+import Contact from './components/Contact/Contact';
 import Newsletter from './components/Newsletter/Newsletter';
 
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Provide />
       <Why />
       <Network />
+      <Contact />
       <Newsletter />
     </main>
   )

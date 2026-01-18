@@ -37,6 +37,50 @@ html:not([data-scroll="0"]) .navbar {
     background-size: contain;
 }
 
+.banner-image > .text-center:first-of-type {
+    padding-top: 0px;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.banner-image > .text-center:not(:first-of-type) {
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+@media screen and (max-width: 1200px) {
+    .banner-image > .text-center {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    
+    .banner-image > .text-center:first-of-type {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner-image > .text-center {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .banner-image > .text-center:first-of-type {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .banner-image > .text-center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .banner-image > .text-center:first-of-type {
+        padding-top: 60px;
+    }
+}
+
 hr {
     border-color: rgba(196, 196, 196, 0.65);
 }
