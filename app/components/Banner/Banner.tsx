@@ -1,9 +1,39 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const Banner = () => {
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.playbackRate = 0.35;
+            video.play().catch(() => {
+                // Autoplay was prevented, that's okay
+            });
+        }
+    }, []);
+
     return (
-        <main className="relative isolate min-h-screen py-12 sm:py-16 lg:py-20">
-            <div className="absolute inset-0 flex justify-center items-start pt-6 pointer-events-none z-0">
+        <main className="relative isolate min-h-[calc(100vh-80px)] py-12 sm:py-16 lg:py-20 overflow-hidden bg-transparent">
+            <video
+                ref={videoRef}
+                className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+                src="/assets/banner/abstract-balls-background.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                style={{ 
+                    opacity: 0.35, 
+                    filter: "blur(20px) saturate(0.6)",
+                    zIndex: -1 
+                }}
+            />
+            <div className="absolute inset-0 flex justify-center items-start pt-6 pointer-events-none z-20">
                 <div className="h-[380px] sm:h-[420px] lg:h-[520px] flex items-start justify-center w-full">
                     <Image
                         src={'/assets/banner/shapes.svg'}
@@ -15,7 +45,7 @@ const Banner = () => {
                     />
                 </div>
             </div>
-            <div className="px-6 lg:px-8 w-full relative z-10">
+            <div className="px-6 lg:px-8 w-full relative z-30">
                 <div className="mx-auto max-w-7xl flex min-h-[calc(100vh-6rem)] flex-col items-center text-center">
                     <div className="w-full">
                         <h1 className="text-4xl font-semibold text-navyblue sm:text-5xl lg:text-7xl md:4px lh-96">
