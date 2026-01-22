@@ -9,21 +9,39 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Fallback for browsers that don't support svh units */
+@supports not (min-height: 100svh) {
+    .hero-section {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Ensure html/body don't cause mobile viewport issues */
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
 }
 
-html:not([data-scroll="0"]) .navbar {
+/* Navbar is ALWAYS fixed to prevent layout shift when scrolling to top */
+.navbar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    background-color: transparent;
+    z-index: 50;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html:not([data-scroll="0"]) .navbar {
     background-color: white !important;
-    opacity: 1.9;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-    transition: 0.4s linear;
-    padding: 0px !important;
-    z-index: 3;
 }
 
 .leafbutton {
