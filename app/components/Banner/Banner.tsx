@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Banner = () => {
     return (
-        <main className="relative isolate min-h-screen pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20 overflow-hidden bg-transparent">
+        <main className="relative isolate min-h-screen overflow-hidden bg-transparent">
             <div className="absolute inset-0 flex justify-center items-start pt-6 pointer-events-none z-20">
                 <div className="h-[380px] sm:h-[420px] lg:h-[520px] flex items-start justify-center w-full">
                     <Image
@@ -17,8 +17,8 @@ const Banner = () => {
                     />
                 </div>
             </div>
-            <div className="px-6 lg:px-8 w-full relative z-30">
-                <div className="mx-auto max-w-7xl flex flex-col items-center text-center justify-center min-h-[calc(100vh-8rem)]">
+            <div className="px-6 lg:px-8 w-full relative z-30 pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+                <div className="mx-auto max-w-7xl flex flex-col items-center text-center gap-6">
                     <div className="w-full">
                         <h1 className="text-4xl font-semibold text-navyblue sm:text-5xl lg:text-7xl md:4px lh-96">
                             <span>We help businesses</span> <br /> <span>get noticed, get chosen,</span> <br /> <span>and get paid.</span>
@@ -28,7 +28,7 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <button type="button" className='text-15px text-white font-medium bg-blue py-5 px-9 mt-2 leafbutton'>
                             Get a Free Improvement Check
                         </button>
@@ -37,10 +37,10 @@ const Banner = () => {
                         </button>
                     </div>
 
-                    <div className="relative mx-auto mt-4 h-[260px] sm:h-[320px] lg:h-[480px] w-full max-w-4xl flex-1">
-                        <Image 
-                            src={'/assets/banner/RocketGrowthChart.webp'} 
-                            alt="banner-image" 
+                    <div className="relative mx-auto h-[260px] sm:h-[320px] lg:h-[480px] w-full max-w-4xl">
+                        <Image
+                            src={'/assets/banner/RocketGrowthChart.webp'}
+                            alt="banner-image"
                             fill
                             className="object-contain"
                             sizes="(max-width: 1024px) 100vw, 1200px"
