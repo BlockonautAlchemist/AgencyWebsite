@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const Banner = () => {
     return (
         <main 
@@ -27,18 +25,6 @@ const Banner = () => {
                         <button type="button" className='text-15px mt-2 text-blue transition duration-150 ease-in-out hover:text-white hover:bg-blue font-medium py-5 px-16 border border-lightgrey leafbutton'>
                             See Examples
                         </button>
-                    </div>
-
-                    {/* Hero image - explicit fixed height, no flex-grow */}
-                    <div className="relative mx-auto w-full max-w-4xl h-[260px] sm:h-[320px] lg:h-[480px] flex-shrink-0">
-                        <Image
-                            src={'/assets/banner/RocketGrowthChart.webp'}
-                            alt="banner-image"
-                            fill
-                            className="object-contain"
-                            sizes="(max-width: 1024px) 100vw, 1200px"
-                            priority
-                        />
                     </div>
                 </div>
             </div>
